@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Website of a zoo">
+    <title>DEHZOO</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+    <link rel="mask-icon" href="Images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="Images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="Images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style/normalize.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--https://cdn0.iconfinder.com/data/icons/eco/500/Animal_animals_butterfly_nature_green_insects_eco-512.png-->
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>DEH<span>ZOO</span></h1>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="headnav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AnimalsandPlants.html">Plants|Animals</a></li>
+                    <li><a href="Activities.html">Activities</a></li>
+                    <li><a class="current" href="TicketorDonate.html">Tickets|Donate</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                  </ul>
+            </nav>
+        </header>
+        <article class="main">
+            <h2>Book Now</h2>
+        </article>
+        <div class="bookNowbg">
+            <div class="bookNowContainer">
+                <div class="formContainer">
+                    <div class="formItems">
+                        <form id="bookNowForm">
+                            <div class="formElementContainer">
+                                <!--Pass Container-->
+                                <label class="label_style">Pass:</label>
+                                <div class="radio_group_container">
+                                    <div class="radio_button_holder">
+                                        <input type="radio" name="passName" id="day" value="0" onclick="getPassValue(this)" required>
+                                        <label>Day Pass</label><br>
+                                        <span>Per Adult LKR 1000</span><br>
+                                        <span>Per Child LKR 500</span><br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" name="passName" id="student" value="0" onclick="getPassValue(this)"  required>
+                                        <label>Student Pass</label><br>
+                                        <span>Per University Student LKR 500</span><br>
+                                        <span>Per School Student LKR 250</span><br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" name="passName" id="foreigner" value="0" onclick="getPassValue(this)" required>
+                                        <label>Foreigner Pass</label><br>
+                                        <span>Per Adult LKR 5000</span><br>
+                                        <span>Per Child LKR 2500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="formElementContainer">
+                                <!--count Container-->
+                                <label class="label_style">Age Group:</label>
+                                <div class="radio_group_container">
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Adult" value="1000" name="count" onclick="getage(this)" required>
+                                        <label>Day Pass Adult</label>
+                                        <br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Child" value="500" name="count" onclick="getage(this)" required>
+                                        <label>Day Pass Child</label>
+                                        <br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Adult1" value="500" name="count" onclick="getage(this)" required>
+                                        <label>Student Pass Adult</label>
+                                        <br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Child1" value="250" name="count" onclick="getage(this)" required>
+                                        <label>Student Pass Child</label>
+                                        <br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Adult2" value="5000" name="count" onclick="getage(this)" required>
+                                        <label>Foreigner Pass Adult</label>
+                                        <br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="Child2" value="2500" name="count" onclick="getage(this)" required>
+                                        <label>Foreigner Pass Child</label>
+                                        <br>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="formElementContainer">
+                                <!--Duration Container-->
+                                <label class="label_style">Duration:</label>
+                                <div class="radio_group_container">
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="3hours" name="durationType" value="0" onclick="getDurationValue(this)" required>
+                                        <label>3 hours</label><br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="half" name="durationType" value="250" onclick="getDurationValue(this)" required>
+                                        <label>Half Day</label><br>
+                                        <span>Additional LKR 250</span><br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="full" name="durationType" value="500" onclick="getDurationValue(this)" required>
+                                        <label>Full Day</label><br>
+                                        <span>Additional LKR 500</span><br>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input type="radio" id="two" name="durationType" value="1000" onclick="getDurationValue(this)" required>
+                                        <label>Two Days</label><br>
+                                        <span>Additional LKR 1000</span><br>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <!--Extra Container-->
+                            <label class="label_style2">Extras:</label>
+                            <div id="extrasContainer">
+                                <div class="radio_group_container">
+                                    <div class="radio_button_holder">
+                                        <input class="extrasCheckbox" type="checkbox" value="5000" name="AnnualPass" onclick="getCheckbox()">
+                                        <label> Annual Pass </label><br>
+                                        <span>Per pass LKR 5000</span>
+                                    </div>
+                                    <div class="radio_button_holder">
+                                        <input class="extrasCheckbox" type="checkbox" value="500" name="foodtoken" onclick="getCheckbox()">
+                                        <label> Food Token </label><br>
+                                        <span>Per Token LKR 500</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <!--Function Buttons-->
+                            <div class="addButtonHolder">
+                                <input class="formButton" type="button" value="Add To Booking" onclick="addtoTotalOrder()">
+                                <input class="formButton" type="button" value="Add To Favourites" onclick="addToFav()">
+                            </div>
+                        </form>
+                        <div class="addButtonHolder">
+                            <input class="formButton" type="button" value="Add Fav To Booking" onclick="addFavToBooking()">
+                            <input class="formButton" type="button" value="Check Loyalty" onclick="checkLoyalty()">
+                        </div><br>
+                        <input class="formButton2" type="button" value="Place Booking" onclick="calBooking()"><br>
+                    </div>
+                </div>
+                <!--Buy Now Tables-->
+                <table class="booknow_table">
+                    <caption class="currentBookingCaption">Current Booking</caption>
+                    <tbody>
+                        <tr>
+                            <td id="current_Booking" data-label="Pass"></td>
+                            <td id="age__group" data-label="Age Group"></td>
+                            <td id="duration_field" data-label="Duration"></td>
+                            <td id="extras_field" data-label="Extras"></td>
+                            <td id="total_field" data-label="Total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="totalBookingTable" class="booknow_table2">
+                    <caption class="currentBookingCaption2">Overall Booking</caption>
+                </table>
+                <table class="booknow_table2">
+                    <tr>
+                      <td id="grand_total" class="grandTotalContainer">Grand Total=0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+
+
+        <footer>
+            <div class="container">
+                <div class="box">
+                    <h2>About us</h2>
+                    <p>
+                        Welcome to the official webpage of Dehiwala Zoo. Being one of the oldest zoos in Asia, there are varieties of birds, mammals, reptiles, insects, and aquatic animals. Not just with fauna,  the place has a remarkable amount of flora too. A variety of programmes to entertain the visitors and to attract tourists are also orchestrated.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/APIITofficial/" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/apiitsl/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/apiitsl?lang=en" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Address</h2>
+                    <div class="address">
+                        <a href="https://www.google.lk/maps/place/Asia+Pacific+Institute+of+Information+Technology+(APIIT)/@6.9185953,79.8590402,17z/data=!3m1!4b1!4m5!3m4!1s0x3ae2596d3cb8fe07:0x2b0ae2edd563a661!8m2!3d6.9185953!4d79.8612289" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i>
+                            388 Union Pl, Col-2
+                        </a>
+                        <a href="Tel:+94-766024262">
+                            <i class="fas fa-mobile-alt"></i>
+                            +94 766024262
+                        </a>
+                        <a href="mailto:s.abithu1009@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            info@apiit.lk
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Quick links</h2>
+                    <a href="index.html">Home</a><br><br>
+                    <a href="AnimalsandPlants.html">Plants|Animals</a><br><br>
+                    <a href="Activities.html">Activities</a><br><br>
+                    <a href="ContactUs.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="author">
+                <p>&copy; 2021 APIIT, All Rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script/main.js"></script>
+</body>
+</html>
