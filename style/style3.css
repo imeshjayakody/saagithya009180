@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: rgb(29, 37, 29);
+ 
+}
+
+/*Navigation bar*/
+.mainimage figure img{
+    display: flex;
+    width: 100%;
+    height: 312px;
+}
+h1 {
+    position:relative;
+    padding: 3px;
+    color: green;
+    float: left;
+    margin-left: 2%;
+    margin-top: 10px;
+    font-family: "Alfa Slab One", cursive;
+    display: flex ;
+    
+}
+span{
+    color: rgb(51, 70, 51);
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background:linear-gradient(90deg,rgb(155, 179, 152)0%, rgb(62, 145, 62)35%, rgb(21, 255, 0)100%);
+    flex-flow: row;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+nav ul{
+    margin-top: 8px;
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display:block;
+    
+}
+
+li, a {
+    font-family:"Alfa Slab One", cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(54, 71, 56);
+    text-decoration: none;
+}
+.headnav{
+    list-style: none;
+    display: inline-block ;
+}
+.headnav li{
+    display: inline-flex;
+    padding: 15px 15px ;
+}
+.headnav li a{
+    transition: all 0.3s ease 0s ;
+}
+.headnav li a:hover{
+    color: rgb(67, 99, 63);
+}
+.current{
+    color: white;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(171, 196, 171);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    header{
+        justify-content: right;
+    }
+
+    .checkbtn{
+        display:block;
+    }
+    nav ul{
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(40, 46, 40);
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        margin: 50px 0;
+        line-height: 30px;
+        display:contents;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.current{
+        background: none;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+.wrapper > *{
+    padding: 10px;
+    margin: 20px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+/*End of Navigation bar*/
+
+/*Footer designing*/
+footer {
+    font-family:"Alfa Slab One", cursive; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    background:linear-gradient(90deg,rgb(155, 179, 152)0%, rgb(62, 145, 62)35%, rgb(21, 255, 0)100%);
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(52, 71, 47);
+}
+.box{
+    flex: 1;
+    margin: 15px;
+    min-width: 300px;
+}
+.box h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #555;
+    color: rgb(51, 70, 51);
+    position: relative;
+    margin-bottom: 15px;
+}
+.box h2::before{
+    content:"";
+    width: 100px;
+    height: 100%;
+    position: absolute;  
+}
+.box a{
+    color: rgb(44, 73, 37);
+    text-decoration: none;
+    display: inline-block;
+}
+.box a i{
+    background: rgb(165, 187, 164);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    transition: 0.5s linear ;
+}
+.box a:hover,
+.box a:hover i{
+    color: rgb(67, 99, 63);
+    border-radius: 50%;
+}
+.social{
+    margin-top:5px;
+}
+.address a{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+.author{
+    color: rgb(0, 0, 0);
+    text-align:end;
+    padding: 15px 0;
+    font-size: 1.3em;
+    
+}
+/*End of Footer designing*/
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px 1fr 320px 300px 170px;
+    background-color: rgb(109, 180, 127);
+    grid-gap: 10px;
+    grid-template-areas: 
+    " section1 section1" 
+    " section2 section4"
+    " section3 section3"
+    " section6 section6"
+    " section5 section5";
+}
+img{
+    width: 400px;
+    height: 250px;
+}
+
+.section1{
+    grid-area: section1 ;
+    border-radius: 20px;
+}
+.section2{
+    grid-area: section2 ;
+    padding: 20px;
+}
+.section3{
+    grid-area: section3 ;
+    background-color: rgb(97, 160, 95);
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+.section4{
+    grid-area: section4 ;
+    padding: 20px;
+    
+}
+.section5{
+    grid-area: section5 ;
+    background-color: rgb(97, 160, 95);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    animation-name: example ;
+    animation-iteration-count: infinite;
+}
+.section6{
+    grid-area: section6 ;
+    justify-self: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+.section6 img{
+    padding: 10px;
+}
+.section1 img{
+    width: 100%;
+    height: 312px;
+}
+.section2 h2{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: rgb(67, 158, 58);
+    
+}
+.section2 p{
+    padding: 10px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: rgb(37, 39, 37);
+}
+.section4 iframe{
+    padding: 10px 10px 10px 10px;
+    width: 95%;
+    height: 300px;
+    justify-self: center;
+}
+.section3 h2{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: darkgrey;
+    text-align: center;
+    
+}
+
+.section3 p {
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+span{
+    text-indent: 10px;
+}
+.section5 .actnav h3{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: darkgrey;
+    
+}
+.section5 .actnav a{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+}
+
+@media (max-width: 1100px){
+    .body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 320px 1fr 350px 320px 840px 280px;
+        background-color: rgb(109, 180, 127);
+        grid-gap: 10px;
+        grid-template-areas: 
+        " section1 section1" 
+        " section2 section2"
+        " section4 section4"
+        " section3 section3"
+        " section6 section6"
+        " section5 section5";
+    }
+    .section6 img{
+        display: grid;
+        width: 85%;
+    }
+}
+
+@keyframes example {
+    from {background-color: rgb(97, 160, 95)d;}
+    to {background-color: rgb(0, 0, 0);}
+}
+img:hover{
+    transform:scale(1.09);
+    z-index: 2;  
+}

@@ -1,0 +1,921 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+/*Navigation bar*/
+.mainimage figure img{
+    display: flex;
+    width: 100%;
+    height: 312px;
+}
+h1 {
+    position:relative;
+    padding: 3px;
+    color: green;
+    float: left;
+    margin-left: 2%;
+    margin-top: 10px;
+    font-family: "Alfa Slab One", cursive;
+    display: flex ;
+}
+span{
+    color: rgb(51, 70, 51);
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(40, 46, 40);
+    flex-flow: row;
+    display: inline;
+    box-sizing: border-box;
+}
+nav ul{
+    margin-top: 8px;
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display:block;
+  }
+
+li, a {
+    font-family:"Alfa Slab One", cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: #aaa;
+    text-decoration: none;
+}
+.headnav{
+    list-style: none;
+    display: inline-block ;
+}
+.headnav li{
+    display: inline-flex;
+    padding: 15px 15px ;
+}
+.headnav li a{
+    transition: all 0.3s ease 0s ;
+}
+.headnav li a:hover{
+    color: rgb(67, 99, 63);
+}
+.current{
+    color: white;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(171, 196, 171);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display:block;
+    }
+    nav ul{
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(40, 46, 40);
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        margin: 50px 0;
+        line-height: 30px;
+        display:contents;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.current{
+        background: none;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/*End of Navigation bar*/
+  
+/*Home page*/
+.main{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    font-weight: 200;
+    max-height: fit-content;
+    color: rgb(35, 93, 29);
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 7px;
+    position:static;
+    animation: text 4s 1;
+    text-align: center;
+    
+}
+
+@keyframes text {
+    0%{
+        color: rgb(14, 78, 5);
+        margin-bottom: -40px;
+    }
+    25%{
+        letter-spacing: 25px;
+        
+    }
+    50%{
+        letter-spacing: 20px;
+    }
+    75%{
+        letter-spacing: 15px;
+    }
+    100%{
+        letter-spacing: 7px;
+    }
+    
+}
+
+.images figure{
+    align-items: center;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    left: 0;
+    display: flex;
+}
+
+img {
+    width: 400px;
+    height: 250px;
+    float: left;
+    padding: 0 10px 10px 0;
+
+}
+.para1{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+.para2{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: rgb(71, 179, 57);
+}
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+.wrapper > *{
+    padding: 10px;
+    margin: 20px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+.aside1{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+    width: 100%;
+}
+.aside2{
+    text-align: left;
+    height: auto;
+}
+
+@media all and (min-width:100) {
+    .main{
+        flex:3;
+    }
+    .aside1{
+        order:2;
+    }
+    .aside2{
+        order:3;
+    }
+    .main{
+        order: 0;
+    }
+
+}
+@media all and (min-width:480px) {
+    .aside{
+        flex:3;
+    }
+}
+
+.home img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Rules*/
+.rulespara{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    margin-left: 50px;
+}
+.rulesspan{
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(10, 56, 1);
+}
+.rulesection{
+    background-color: rgb(0, 0, 0);
+}
+.rulesol{
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.rulesol li{
+    font-size: larger;
+    color: rgb(36, 44, 35);
+}
+.rulesul{
+    list-style:disc;
+    margin-left: 150px;
+    
+}
+.rulesul li{
+    font-size: 20px;
+    color: rgb(34, 54, 30);
+}
+/*End of Rules*/
+/*End of Home page*/
+
+/*Footer designing*/
+footer {
+    font-family:"Alfa Slab One", cursive; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    background: rgb(40, 46, 40);
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #aaa;
+}
+.box{
+    flex: 1;
+    margin: 15px;
+    min-width: 300px;
+}
+.box h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #555;
+    color: rgb(51, 70, 51);
+    position: relative;
+    margin-bottom: 15px;
+}
+.box h2::before{
+    content:"";
+    width: 100px;
+    height: 100%;
+    position: absolute;  
+}
+.box a{
+    color: #aaa;
+    text-decoration: none;
+    display: inline-block;
+}
+.box a i{
+    background: #333;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    transition: 0.5s linear ;
+}
+.box a:hover,
+.box a:hover i{
+    color: rgb(67, 99, 63);
+    border-radius: 50%;
+}
+.social{
+    margin-top:5px;
+}
+.address a{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+.author{
+    color: #aaa;
+    background: black;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+/*End of Footer designing*/
+
+/*Contact Us Webpage*/
+.form{
+    max-width:600px ;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.form-text{
+    display:block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border:0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+textarea .form-text{
+    resize: none;
+    height: 120px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.form-btn{
+    float: right;
+    border: 0;
+    background: #034624 ;
+    color: rgb(166, 180, 138);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    padding: 12px 50px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    cursor:pointer;
+    transition: 0.5s;
+    margin-left :5px ;
+}
+.form-btn:hover{
+    background: #147545;
+}
+/*End of Contact Us Webpage*/
+
+#aboutcontainer{
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.aboutmain{
+    padding: 1em;
+    margin: 0;
+} 
+#aboutboxes .aboutcontainer{
+    margin: .8em .2em;
+    width: 100%;
+    box-sizing:border-box;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color: rgb(79, 92, 66);
+}
+#aboutboxes  h3, #aboutboxes  p{
+    width:90%;
+    padding:0;
+    margin: 1em auto;
+}
+.aboutbutton{
+    padding: .8em;
+    background-color: #ffffff;
+    color:rgb(17,17,17);
+    align-items: center;
+    text-decoration: none;
+    display: block;
+    margin: .8em auto .8em 0;
+    width:100px
+}
+.aboutcontainer:hover{
+    transform:scale(1.09);
+    z-index: 2;  
+}
+#aboutboxes{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(400px,1fr));
+    grid-gap: 40px;
+    justify-content: center;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#boxes .aboutimg{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin:0 auto;
+}
+#aboutboxes .aboutcontainer h3{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    color: rgb(28, 66, 34);
+}
+#aboutboxes .aboutcontainer p{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: larger;
+}
+/*End of About webpage*/
+/*Birds webpage*/
+.aboutnav{
+    text-align: center;
+    background-color: rgb(40, 46, 40);
+    font-size: 40px;
+    font-weight: 800;
+}
+.aboutnav ul{
+    list-style: none;
+    display: inline-block ;
+}
+.aboutnav li{
+    display: inline-flex;
+    padding: 15px 15px ;
+}
+.aboutnav li a:hover{
+    color: rgb(67, 99, 63);
+}
+
+/*Plants and animals image slider*/
+.slider-holder{
+    width: 400px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.image-holder{
+    width: 2400px;
+    height: 200px;
+    clear: both;
+    position: relative;
+    transition: left 2s;
+}
+.slider-image{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}       
+#slider-image-1:target ~ .image-holder{
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder
+{
+    left: -400px;
+}
+
+#slider-image-3:target ~ .image-holder
+{
+    left: -800px;
+}
+#slider-image-4:target ~ .image-holder
+{
+    left: -1200px;
+}
+#slider-image-5:target ~ .image-holder
+{
+    left: -1600px;
+}
+#slider-image-6:target ~ .image-holder
+{
+    left: -2000px;
+}
+.button-holder{
+    position: relative;
+    top: -20px;
+}
+.slider-change{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: rgb(122, 223, 127);
+}
+.about .para1{
+    text-align: center;
+    margin-top: 20px;
+}
+/*Plants table*/
+table .plant{
+    color: rgb(26, 122, 42);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+table .plant, th .plantth , td .planttd{
+    border: 1px rgb(0, 0, 0);
+    border-collapse:collapse ;
+}
+th .plantth , td .planttd{
+    padding: 10px;
+    
+}
+.plantth ,.plantthimg{
+    text-align: center;
+    background-color: rgb(67, 160, 59);
+    color: rgb(28, 48, 31);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+}
+table .plant .Plantul{
+    margin-left: 30px;
+    margin-top: 20px;
+    
+}
+table .Plantul li{
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+table .plant img{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+}
+table .plant .planttr .planttd{
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    
+}
+.planttfoot{
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+table img:hover{
+    transform:scale(1.09);
+    z-index: 2;  
+}
+@media (max-width:800px) {
+    table{
+        display:table;
+        width: 90%; 
+    }
+    table img{
+        position: relative;
+        width: 200px;
+        height: 160px;
+    }
+
+}
+@media (max-width:500px) {
+    table{
+        display:table;
+        width: 90%; 
+    }
+    .planttdimg,.plantthimg{
+        display: none;
+        
+    }
+}
+/*end of plants table*/
+/*Activity page*/
+img{
+    width: 400px;
+    height: 250px;
+    
+}
+.body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actmain{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+.actcontainer{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 360px;
+    height: 400px;
+    padding: 24px;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s ease-out;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+.actcontainer:hover{
+    transform: translateY(-25px);
+}
+.actcontainer:hover:before{
+    opacity: 1;
+}
+.actcontainer:hover .acttext{
+    opacity: 1;
+    transform: translateX(10px);
+}
+.actcontainer:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0),transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+.actcontainer img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.actcontainer .acttext{
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(60px);
+    transition:0.5s ;
+}
+.acttext h3{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    letter-spacing: 3px;   
+}
+.acttext p{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: justify;
+    color: rgb(96, 156, 84);
+}
+@media (max-width: 858px){
+    .actmain{
+        display: inline;
+        margin-left:0;
+        margin-right: 20px;
+    }
+    .actcontainer{
+        margin-top: 40px;
+        width: 300px;
+    }
+}
+/* donate and tickets page */
+#tickcontainer{
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tickmain{
+    padding: 1em;
+    margin: 0;
+} 
+#tickboxes .tickcontainer{
+    margin: .8em .2em;
+    width: 100%;
+    box-sizing:border-box;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color: rgb(79, 92, 66);
+}
+#tickboxes  h3, #tickboxes  p{
+    width:90%;
+    padding:0;
+    margin: 1em auto;
+}
+.tickbutton{
+    padding: .8em;
+    background-color: #afbdb0;
+    color:rgb(17,17,17);
+    align-items: center;
+    text-decoration: none;
+    display: block;
+    margin: .8em auto .8em 0;
+    width:100px
+}
+.tickcontainer:hover{
+    transform:scale(1.09);
+    z-index: 2;  
+}
+#tickboxes{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(400px,1fr));
+    grid-gap: 80px;
+    justify-content:center;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#boxes .tickimg{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin:0 auto;
+}
+#tickboxes .tickcontainer h3{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    color: rgb(8, 61, 16);
+}
+#tickboxes .tickcontainer p{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: larger;
+}
+
+/*ticket booking page*/
+.bookNowContainer {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    box-shadow:  0 0 5px 5px rgba(0,0,0,0.1);
+    background-color: #8aa88e;
+    margin-top:auto;
+    margin-bottom: 15px;
+    padding:18px 1em 4em 10px;
+}
+
+.formElementContainer, #extrasContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formButton, .formButton2 {
+    margin:0.5em;
+    cursor: pointer;
+    border:none;
+    padding:0.7em 1.53em 0.7em 1.2em;
+    background: #034624 ;
+    color: rgb(166, 180, 138); 
+    font-size: 12px;
+    border-radius: 20px;
+    width:135px;
+    transition: 0.4s;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.formButton:hover, .formButton2:hover{
+    opacity: 0.8;
+}
+
+.formButton2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addButtonHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label_style, .label_style2 {
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bolder;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color:#28a745;
+}
+
+.radio_group_container, .number_group_container {
+    flex-direction: row;   
+    justify-content: unset;
+    align-items: unset;
+    margin-top:0.6em;                               
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio_group_container label, .number_group_container label {
+    margin-right: 0.6em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+    
+.radio_button_holder, .number_holder {
+    margin-right: 1em;                              
+    margin-bottom: 0.3em;
+}
+    
+.radio_button_holder span{            
+    font-size: 15px;
+
+}
+    
+.currentOrderCaption, .currentOrderCaption2 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    text-decoration-color: #28a745;
+}
+
+.booknow_table, .booknow_table2 {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.booknow_table tr, .booknow_table2 tr {
+    padding:0.6em;
+    background-color: rgba(204, 204, 204, 0.1);
+    border: 2px solid #28a745;
+    border-radius: 20px;
+}
+    
+.booknow_table2 tr {
+    border-radius:unset;
+}
+    
+.booknow_table2 tbody tr {
+    margin-bottom: 1.5em;
+}
+    
+.booknow_table td, .booknow_table2 td {
+    min-height:1em;
+    padding: 0.6em;
+    text-align: right;
+}
+    
+.booknow_table tr, .booknow_table tr {
+    display: block;
+    border-bottom: 2px solid rgba(0, 87, 43, 0.4);
+    margin-bottom: 0.7em;
+}
+      
+.booknow_table td, .booknow_table2 td {
+    display: block;
+    font-size: 0.8em;
+    text-align:left;
+    border-bottom: 1px solid
+}
+
+.booknow_table2 td {
+    text-align: left;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.booknow_table td:nth-child(5) {
+    background-color:#28a745; 
+    color:white;
+    
+}
+    
+.booknow_table td::before {
+    content: attr(data-label);
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.booknow_table2 .grandTotalContainer {
+    background-color: #28a745;
+    color:white;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}

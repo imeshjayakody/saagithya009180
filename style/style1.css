@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: slategray;
+ 
+}
+
+/*Navigation bar*/
+
+h1 {
+    position:relative;
+    padding: 3px;
+    color: green;
+    float: left;
+    margin-left: 2%;
+    margin-top: 10px;
+    font-family: "Alfa Slab One", cursive;
+    display: flex ;
+    order: 2;
+    justify-content:space-between;
+
+}
+span{
+    color: rgb(51, 70, 51);
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(40, 46, 40);
+    border-style:dotted;
+    border-color: rgb(255, 255, 255);
+    flex-flow: row;
+    display: flex;
+    box-sizing: border-box;
+    justify-content:space-between;
+
+}
+nav ul{
+    margin-top: 8px;
+    float: right;
+    margin-right: 20px;
+    order:1;
+}
+nav ul li{
+    display:block;
+}
+
+li, a {
+    font-family:"Alfa Slab One", cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(48, 153, 38);
+    text-decoration: none;
+}
+.headnav{
+    list-style: none;
+    display: inline-block ;
+}
+.headnav li{
+    display: inline-flex;
+    padding: 15px 15px ;
+}
+.headnav li a{
+    transition: all 0.3s ease 0s ;
+}
+.headnav li a:hover{
+    color: rgb(67, 99, 63);
+    background-color: rgb(173, 230, 181);
+}
+.current{
+    color: rgb(5, 7, 5);
+    background-color: rgb(173, 230, 181);
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(171, 196, 171);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display:block;
+    }
+    nav ul{
+        position:absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(40, 46, 40);
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+        
+    }
+    nav ul li{
+        margin: 50px 0;
+        line-height: 30px;
+        display:contents;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.current{
+        background: none;
+        color: #ffffff;
+        font-weight: bolder;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+.wrapper > *{
+    padding: 10px;
+    margin: 20px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+/*End of Navigation bar*/
+
+/*Footer designing*/
+footer {
+    font-family:"Alfa Slab One", cursive; 
+    background-color: rgb(40, 46, 40);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    border-style:dotted;
+    border-color: rgb(255, 255, 255);
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(121, 116, 116);
+}
+.box{
+    flex: 1;
+    margin: 15px;
+    min-width: 300px;
+}
+.box h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #555;
+    color: rgb(51, 70, 51);
+    position: relative;
+    margin-bottom: 15px;
+}
+.box h2::before{
+    content:"";
+    width: 100px;
+    height: 100%;
+    position: absolute;  
+}
+.box a{
+    color: #aaa;
+    text-decoration: none;
+    display: inline-block;
+}
+.box a i{
+    background: #333;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    transition: 0.5s linear ;
+}
+.box a:hover,
+.box a:hover i{
+    color: rgb(67, 99, 63);
+    border-radius: 50%;
+}
+.social{
+    margin-top:5px;
+}
+.address a{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+.author{
+    color: #aaa;
+    background: black;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+/*End of Footer designing*/
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 320px 400px 180px;
+    grid-template-areas: 
+    " section1 section2" 
+    " section6 section6"
+    " section3 section4"
+    " section5 section5";
+    grid-gap: 20px;
+}
+img{
+    width: 400px;
+    height: 250px;
+}
+
+.section1{
+    grid-area: section1 ;
+}
+.section2{
+    grid-area: section2 ;
+    border-color: rgb(255, 255, 255);
+    border-style: dotted;
+    padding: 30px;
+    background-color: seagreen;
+}
+.section3{
+    grid-area: section3 ;
+    padding: 40px;
+}
+.section3 span{
+    color: silver;
+}
+.section4{
+    grid-area: section4 ;
+    border-color: rgb(255, 255, 255);
+    border-style: dotted;
+    background-color: seagreen;
+}
+.section5{
+    grid-area: section5 ;
+    border-color: rgb(255, 255, 255);
+    border-style: dotted;
+    padding: 20px;
+    text-align: center;
+    background-color: seagreen;
+}
+.section6{
+    grid-area: section6 ;
+    border-color: rgb(255, 255, 255);
+    border-style: dotted;
+    justify-self: center;
+    padding: 5px;
+    background-color: seagreen;
+}
+.section1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.section2 h2{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: rgb(0, 100, 0);
+    
+}
+.section2 p{
+    padding: 15px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: rgb(255,255,255);
+}
+
+.section3 h2{
+    padding: 20px;
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: darkgreen;
+    text-align: center;
+}
+.section3 p {
+    padding: 10px;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+span{
+    text-indent: 10px;
+    color: rgb(92, 102, 92);
+}
+.section4 iframe{
+    padding: 10px 10px 20px 20px;
+    width: 95%;
+    height: 350px;
+    justify-self: center;
+}
+.section6 img{
+    padding: 10px;
+}
+.section5 .actnav h3{
+    font-family: "Alfa Slab One", cursive;
+    font-size: 40px;
+    color: darkgreen;
+}
+.section5 .actnav a{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+    color: rgb(35, 39, 35);
+}
+
+@media screen and (max-width: 1100px){
+    .body{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 500px 850px 350px 380px 240px;
+        grid-gap: 20px;
+        grid-template-areas: 
+        " section1 section1" 
+        " section2 section2"
+        " section6 section6"
+        " section3 section3"
+        " section4 section4"
+        " section5 section5";
+    }
+    .section6 img{
+        display: grid;
+        width: 320px;
+    }
+    .section4 iframe{
+        padding: 10px ;
+        padding-right: 5px;
+        width: 85%;
+        height: 350px;
+        justify-self: center;
+    }
+}
+ img:hover{
+    transform:scale(1.09);
+    z-index: 2;  
+}
